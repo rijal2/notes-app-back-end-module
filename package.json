@@ -1,0 +1,23 @@
+{
+  "name": "notes-app-back-end-module",
+  "version": "1.0.0",
+  "description": "MODUL MEMBUAT aplikasi back end sederhana",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rijal2/notes-app-back-end-module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rijal2/notes-app-back-end-module/issues"
+  },
+  "homepage": "https://github.com/rijal2/notes-app-back-end-module#readme",
+  "dependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
