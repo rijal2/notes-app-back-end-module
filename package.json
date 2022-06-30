@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rijal2/notes-app-back-end-module#readme",
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
+    "nanoid": "^4.0.0",
     "nodemon": "^2.0.18"
   },
   "devDependencies": {
