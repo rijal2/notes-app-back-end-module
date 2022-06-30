@@ -19,5 +19,8 @@
   "homepage": "https://github.com/rijal2/notes-app-back-end-module#readme",
   "dependencies": {
     "nodemon": "^2.0.18"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
   }
 }
