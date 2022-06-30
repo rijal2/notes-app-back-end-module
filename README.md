@@ -14,3 +14,13 @@ MODUL MEMBUAT aplikasi back end sederhana
 7. Gunakan Hapi pada file entri point, yaitu server.js
 8. Buat konfigurasi dengan menggunakan const init
  
+//MEMBUAT ROUTE
+1. Membuat aplikasi dapat menampilkan/membaca data
+2. Buat route dari sebuah array yang di dalamnya terdiri dari banyak object.
+3. Masing-masing object akan terdiri dari 3 properti, yaitu methode, path, dan handler.
+4. Untuk handler isi dengan arraw function kosong saja karena functionnya akan dibuat pada berkas yang terpisah.
+
+//MEMBUAT DATA PADA FILE notes.js
+1. Buat Array kosong, agar kedepan bisa diisi data
+2. Jangan lupa export sehingga bisa digunakan di server.js
+
