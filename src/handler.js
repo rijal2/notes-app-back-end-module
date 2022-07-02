@@ -88,4 +88,49 @@ const getNoteByIdHandler = (request, h) => {
   return res;
 };
 
-module.exports = { addNoteHandler, getAllNotesHandler, getNoteByIdHandler };
+// Mengubah/menedit catatan
+const editNoteByIdHandler = (request, h) => {
+  // Dapatkan id catatan yang akan diubah melalui params
+  const { id } = request.params;
+
+  // Dapatkan perubahan data terbaru melalui body. Pada Hapi.js tersimpan didalam payload
+  const { title, tags, body } = request.payload;
+
+  // Selain mengirim 3 properti diatas kita jg harus mengubah properti createAt dan upadateAT
+  const updatedAt = new Date().toISOString();
+
+  // Temukan index dari object catatan yang id nya sdh kita dapatkan melalui params di atas.
+  // Gunakan findIndex() sehingga tidak perlu menggunakan ifelse
+  const index = notes.findIndex((n) => n.id === id);
+
+  // Lakukan pemeriksaan terhadap 'index' diatas.
+  // apabila id yang dimaksud tdk ditemukan maka method findIndex() akan mengembalikan nilai -1
+  if (index !== -1) {
+    notes[index] = {
+      ...notes[index],
+      title,
+      tags,
+      body,
+      updatedAt,
+    };
+
+    const res = h.response({
+      status: 'Succes',
+      message: 'Catatan berhasil diubah',
+      data: notes[index],
+    });
+
+    res.code(201);
+    return res;
+  }
+  const res = h.response({
+    status: 'Failed',
+    message: 'Perubahan yang anda lakukan gagal ditambahkan',
+  });
+  res.code(404);
+  return res;
+};
+
+module.exports = {
+  addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler,
+};

@@ -1,4 +1,6 @@
-const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler } = require('./handler');
+const {
+  addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler,
+} = require('./handler');
 
 const routes = [
   // Routes Menampilkan semua data
@@ -18,6 +20,12 @@ const routes = [
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
+  },
+  // Mengubah data berdasarkan id
+  {
+    method: 'PUT',
+    path: '/notes/{id}',
+    handler: editNoteByIdHandler,
   },
 ];
 
