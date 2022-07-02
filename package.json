@@ -4,7 +4,9 @@
   "description": "MODUL MEMBUAT aplikasi back end sederhana",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js",
+    "lint": "eslint ./",
+    "lint-fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,13 @@
   },
   "homepage": "https://github.com/rijal2/notes-app-back-end-module#readme",
   "dependencies": {
-    "@hapi/hapi": "^20.2.2",
-    "nanoid": "^4.0.0",
+    "@hapi/hapi": "^20.1.5",
+    "nanoid": "^3.1.25",
     "nodemon": "^2.0.18"
   },
   "devDependencies": {
-    "eslint": "^8.18.0"
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }

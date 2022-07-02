@@ -31,3 +31,6 @@ MODUL MEMBUAT aplikasi back end sederhana
 
 4. Client mengirimkan title, tags, body. Untuk properti yg lain (seperti id, createAt, updatedAt) kita olah sendiri.
 5. Install nanoid untuk membuat id unik berupa string.
+6. Gabungkan semua properti yang sudah lengkap (id, tiitle, tags, body, createAt, uodatedAt) pada sebuah object.
+7. Masukkan data tersbut kedalam array notes
+8. Setting respon sesuai dengan yang disarankan oleh dokumentasi hapi.js

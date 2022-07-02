@@ -1,17 +1,24 @@
-const { addNoteHandler } = require('./handler')
+const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler } = require('./handler');
 
 const routes = [
-    {
-        method: 'GET',
-        path: '/',
-        handler: () => {}
-    },
-    // Routes Tambah data
-    {
-        method: 'POST',
-        path: '/notes',
-        handler: addNoteHandler
-    }
-]
+  // Routes Menampilkan semua data
+  {
+    method: 'GET',
+    path: '/notes',
+    handler: getAllNotesHandler,
+  },
+  // Routes Menampilkan data berdasarkan ID
+  {
+    method: 'GET',
+    path: '/notes/{id}',
+    handler: getNoteByIdHandler,
+  },
+  // Routes Tambah data
+  {
+    method: 'POST',
+    path: '/notes',
+    handler: addNoteHandler,
+  },
+];
 
-module.exports = routes
+module.exports = routes;
